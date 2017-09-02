@@ -14,8 +14,9 @@ public:
 	
 	while(x != 0){
 		last_integer = x%10;
-		Number = Number*10 + last_integer;
+		Number = Number + last_integer;
 		x = x/10;
+		Number *= 10;
 	}
         
 	return Number;
@@ -26,7 +27,7 @@ public:
 int main(int argc, char **argv) {
 	int x = 0, num = 0;
 	Solution solu;
-	cout << "enter number :";
+	cout << "enter number  :";
 	cin >> x;
 
 	num = solu.reverse(x);
